@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    pointer-events: auto;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(197, 196, 196);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 15px;
+}
+
+.logo i {
+    font-size: 25px;
+    margin-top: -5px;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.re-menu {
+    display: none;
+}
+
+.dropdown i {
+    font-size: 25px;
+    margin-top: 10px;
+    color: rgb(173, 173, 173);
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    z-index: 1;
+    height: 1000px;
+}
+
+
+/* .dropdown:hover .dropdown-content {
+    display: block;
+} */
+
+.dropdown-content a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(182, 181, 181);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 15px;
+    border-top: 1px solid rgb(129, 129, 129);
+    margin: 5px 40px;
+}
+
+.dropdown-content a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-content input {
+    height: 35px;
+    width: 90%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    background-color: rgb(68, 68, 68);
+    color: silver;
+    padding: 5px;
+    margin: 10px 5%;
+}
+
+#top-dropdow-content {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 55px;
+}
+
+#close {
+    display: none;
+}
+
+
+/*container and notification */
+
+.notification {
+    padding-top: 50px;
+    width: 100%;
+    height: 100px;
+}
+
+.notification .b-1 {
+    background-color: rgb(85, 85, 255);
+    height: 50px;
+}
+
+.b-1 a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.notification .b-2 {
+    background-color: rgb(238, 238, 238);
+    height: 50px;
+}
+
+.b-2 a {
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(56, 56, 56);
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.notification div a:hover {
+    text-decoration: underline;
+}
+
+.QC-1 a img {
+    width: 100%;
+    height: 900px;
+}
+
+.QC-1 {
+    position: relative;
+    z-index: 1;
+}
+
+.click-on {
+    margin-top: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    opacity: 0.7;
+}
+
+.QC-1 .click-on h3 {
+    font-size: 50px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.QC-1 .click-on h4 {
+    font-size: 30px;
+    color: rgb(119, 2, 2);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.QC-1 .click-on p {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.click-on a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(74, 74, 255);
+    margin: 20px;
+}
+
+.click-on a:hover {
+    border-bottom: 2px solid rgb(96, 96, 255);
+}
+
+.QC-2 a img {
+    width: 100%;
+    height: 900px;
+}
+
+.QC-2 {
+    position: relative;
+    z-index: 1;
+}
+
+.QC-2 .click-on {
+    margin-top: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.QC-2 .click-on h3 {
+    font-size: 50px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 10px;
+}
+
+.QC-2 .click-on h4 {
+    font-size: 20px;
+    color: rgb(119, 2, 2);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
+
+.QC-2 .click-on p {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+/* Grid Content - A1-A6*/
+
+.grid-content {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.grid-content div a img {
+    width: 100%;
+    height: 550Px;
+}
+
+.leanmore {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+
+.leanmore:hover {
+    border-bottom: 1px solid blue;
+}
+
+
+/* content A1*/
+
+.content-A1 {
+    position: relative;
+    z-index: 1;
+}
+
+.content-A1 .leanmore {
+    position: absolute;
+    bottom: 40px;
+    left: 45%;
+    z-index: 2;
+}
+
+
+/* content A2*/
+
+.content-A2 {
+    position: relative;
+    z-index: 1;
+}
+
+.content-A2 .re-content-A2 {
+    position: absolute;
+    top: 20px;
+    left: 30%;
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    z-index: 2;
+    background-color: #f7faf9;
+}
+
+.re-content-A2 h3 {
+    font-size: 50px;
+}
+
+.re-content-A2 p {
+    margin: 10px 0px;
+}
+
+
+/* content A3*/
+
+.content-A3 {
+    position: relative;
+    z-index: 1;
+}
+
+.content-A3 .re-content-A3 {
+    position: absolute;
+    top: 20px;
+    left: 27%;
+    right: 27%;
+    text-align: center;
+    z-index: 2;
+}
+
+.re-content-A3 span {
+    margin-bottom: 20px;
+}
+
+
+/* content A4*/
+
+.content-A4 {
+    position: relative;
+    z-index: 1;
+}
+
+.content-A4 .leanmore {
+    position: absolute;
+    bottom: 40px;
+    left: 45%;
+    z-index: 2;
+    color: white;
+}
+
+.content-A4 .leanmore:hover {
+    border-bottom: 1px solid white;
+}
+
+
+/* content A5*/
+
+.content-A5 {
+    position: relative;
+    z-index: 1;
+}
+
+.content-A5 .re-content-A5 {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    z-index: 2;
+}
+
+.re-content-A5 h3 {
+    font-size: 50px;
+}
+
+
+/* content A6*/
+
+.content-A6 {
+    position: relative;
+    z-index: 1;
+}
+
+.content-A6 .re-content-A6 {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    z-index: 2;
+}
+
+.re-content-A6 h3 {
+    font-size: 50px;
+}
+
+
+/*footer*/
+
+.footer {
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    height: auto;
+}
+
+.head-footer {
+    border-bottom: 1px solid silver;
+    margin: 0% 25%;
+}
+
+.head-footer p {
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    padding: 5px 0px;
+    color: rgb(197, 197, 197);
+}
+
+.center-footer {
+    border-bottom: 1px solid silver;
+    margin: 0% 25%;
+}
+
+.grid-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.grid-col div {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-col div a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: rgb(68, 68, 68);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.grid-col div p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grid-col div a:hover {
+    text-decoration: underline;
+}
+
+#notification-footer {
+    padding: 5px;
+    margin: 10px 0px;
+    color: rgb(151, 151, 151);
+}
+
+.center-footer p a {
+    text-decoration: none;
+    color: rgb(69, 69, 250);
+}
+
+.center-footer p a:hover {
+    text-decoration: underline;
+}
+
+.center-footer {
+    border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+
+/*last footer*/
+
+.last-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0% 25%;
+    padding: 10px 0px;
+}
+
+.last-footer a {
+    text-decoration: none;
+    color: silver;
+    border-left: 2px solid silver;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+}
+
+.last-footer p {
+    color: rgb(139, 138, 138);
+    font-size: 14px;
+}
+
+.last-footer div {
+    width: 20%;
+}
+
+.last-footer #p-right {
+    float: right;
+}
+
+.last-footer #p-left {
+    float: left;
+}
+
+.last-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* responsive */
+
+@media only screen and (max-width:768px) {
+    .menu {
+        display: none;
+    }
+    .re-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .re-menu a {
+        color: rgb(173, 173, 173);
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .re-menu a:hover {
+        color: white;
+    }
+    .dropdown-content {
+        display: block;
+    }
+    .grid-content div a img {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .QC-1 a img {
+        height: auto;
+    }
+    .QC-1 .click-on h3 {
+        font-size: 30px;
+    }
+    .QC-1 .click-on h4 {
+        font-size: 20px;
+    }
+    .QC-1 .click-on p {
+        font-size: 25px;
+    }
+    .QC-2 a img {
+        height: auto;
+    }
+    .grid-content div a img {
+        height: 300px;
+    }
+    /*content grid respon... */
+    .content-A1 .leanmore {
+        bottom: 30px;
+        left: 43%;
+        font-size: 13px;
+    }
+    /*content A3*/
+    .content-A2 .re-content-A2 {
+        left: 30%;
+        width: 200px;
+        height: 100px;
+    }
+    .re-content-A2 h3 {
+        font-size: 30px;
+    }
+    .re-content-A2 p {
+        margin: 2px 0px;
+    }
+    .re-content-A5 h3 {
+        font-size: 30px;
+    }
+    .re-content-A6 h3 {
+        font-size: 30px;
+    }
+    .head-footer {
+        border-bottom: 1px solid silver;
+        margin: 0% 5%;
+    }
+    .center-footer {
+        margin: 0% 5%;
+    }
+    .last-footer {
+        margin: 0% 5%;
+    }
+    .last-footer div {
+        width: 100px;
+    }
+    .menu {
+        margin-left: 40px;
+        margin-right: 20px;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .container .grid-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .footer .center-footer div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .last-footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    #QC-3-h3 {
+        font-size: 20px;
+    }
+    .grid-col div p {
+        cursor: pointer;
+    }
+    .grid-col div .onshow {
+        display: none;
+    }
+    .grid-col div {
+        position: relative;
+        display: inline-block;
+    }
+    .grid-col div:hover .onshow {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#onsearch {
+    display: none;
+}
+
+#onsearch input {
+    width: 50px;
+    margin: 0;
+    background-color: rgb(59, 59, 59);
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 5px;
+    opacity: 0.8;
+    color: white;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#onsearch input[type=search]:focus {
+    width: 200px;
+}
